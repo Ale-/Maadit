@@ -1,0 +1,29 @@
+#
+# MAADIT, 2017, based on d8's 'Classy' theme
+#
+
+name: 'Maadit'
+type: theme
+description: 'Tema principal de Maadix. Basado en Classy.'
+base theme: classy 
+libraries:
+  - maadit/styles
+regions:
+  # Common
+  navigation: 'Navegación'
+  messages: 'Mensajes de sistema'
+  header: 'Cabecera'
+  content: 'Contenido principal'
+  footer: 'Pie' 
+  # Home
+  landing: 'Bloque de aterrorizaje '
+  features_head : 'Bloque superior de características'
+  statements_head : 'Bloque superior de mensajes destacados'
+  features_tail : 'Bloque inferior de características'
+  statements_tail : 'Bloque inferior de mensajes destacados'
+  
+features:
+    - favicon
+    - logo
+version: 8.0.x
+core: 8.x 
