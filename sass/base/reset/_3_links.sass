@@ -1,0 +1,82 @@
+// Links base styles/mixins
+
+@import compass/css3/transition
+
+=default_color_transition
+  +transition(color .15 ease)
+
+
+// Link style mixins
+
+=link($normal, $hover)
+  +default_color_transition
+  &:link, &:visited
+    color: $normal
+  &:hover
+    color: $hover
+  &:active
+    color: $normal
+
+=links($normal, $hover)
+  a
+    +default_color_transition
+    &:link, &:visited
+      color: $normal
+    &:hover
+      color: $hover
+    &:active
+      color: $normal
+
+=link_white_magenta
+  +default_color_transition
+  &:link, &:visited
+    color: white
+  &:hover
+    color: $palette_magenta
+  &:active
+    color: white
+
+=links_white_magenta
+  a
+    +link_white_magenta
+
+=link_magenta_white
+  +default_color_transition
+  &:link, &:visited
+    color: $palette_magenta
+  &:hover
+    color: white   
+  &:active
+    color: $palette_magenta 
+
+=links_magenta_white
+  a
+    +link_magenta_white
+
+=link_brown_magenta
+  +default_color_transition
+  &:link, &:visited
+    color: $palette_brown
+  &:hover
+    color: $palette_magenta
+  &:active
+    color: $palette_brown 
+
+=links_brown_magenta
+  a
+    +link_brown_magenta
+
+=link_box_white
+  border: 1px solid white
+  +transition(background-color, .15s ease)
+  &:link, &:visited
+    color: white
+  &:hover
+    background-color: white
+    color: $palette_magenta
+  &:active
+    color: white
+
+=links_box_white
+  a
+    +link_box_white

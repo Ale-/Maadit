@@ -42,6 +42,58 @@
     &:active
       color: #333
 
+=link_header
+  +transition(color .1s ease)
+  &:link, &:visited
+    color: white
+  &:hover
+    color: $palette_magenta
+  &:active
+    color: white
+
+=links_header
+  a
+    +link_header
+
+=link_colophon
+  +transition(color .1s ease)
+  &:link, &:visited
+    color: $palette_magenta
+  &:hover
+    color: white   
+  &:active
+    color: $palette_magenta 
+
+=links_colophon
+  a
+    +link_colophon
+
+=link_footer
+  +transition(color .1s ease)
+  &:link, &:visited
+    color: $palette_brown
+  &:hover
+    color: $palette_magenta
+  &:active
+    color: $palette_brown 
+
+
+=link_box_white
+  border: 1px solid white
+  +transition(background-color, .15s ease)
+  &:link, &:visited
+    color: white
+  &:hover
+    background-color: white
+    color: $palette_magenta
+  &:active
+    color: white
+
+=links_box_white
+  a
+    +link_box_white
+
+
 +keyframes(showup)
   0%
     +opacity(0)

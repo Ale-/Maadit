@@ -1,0 +1,24 @@
+// Animations
+
+@import compass/css3/opacity
+@import compass/css3/transform
+@import compass/css3/animation
+
+
+// Animation that fades in an ascending element
++keyframes(showup)
+  0%
+    +opacity(0)
+    +transform( translate(0, 100px) )
+  100%
+    +opacity(1)
+    +transform( translate(0, 0) )
+
+// Animation that fades out an element
++keyframes(hide)
+  0%
+    +opacity(1)
+  33%
+    +opacity(1)
+  100%
+    +opacity(0)

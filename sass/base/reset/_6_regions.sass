@@ -1,0 +1,29 @@
+// Regions basic styles
+
+@if $header
+  #{$header}
+    color: $color_header_text
+    background-color: $color_header_background
+
+@if $footer
+  #{$footer}
+    color: $color_footer_text
+    background-color: $color_footer_background
+
+.region-footer-left,
+.region-footer-right
+  background: white
+
+.region-colophon
+  background-color: $palette_brown
+  border-top: 2px solid $palette_magenta
+
+// Fonts
+.region-navigation,
+.region-header,
+.region-footer,
+.region-footer-left,
+.region-footer-right,
+.region-colophon
+  font-family: $font_text
+
