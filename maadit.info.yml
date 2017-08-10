@@ -14,7 +14,8 @@ regions:
   messages: 'Mensajes de sistema'
   header: 'Cabecera'
   content: 'Contenido principal'
-  footer: 'Pie' 
+  footer: 'Pie'
+  colophon: 'Colofón'
   # Home
   landing: 'Bloque de aterrorizaje '
   features_head : 'Bloque superior de características'
