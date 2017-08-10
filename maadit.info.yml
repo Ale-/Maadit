@@ -14,7 +14,8 @@ regions:
   messages: 'Mensajes de sistema'
   header: 'Cabecera'
   content: 'Contenido principal'
-  footer: 'Pie'
+  footer_left: 'Pie izquierdo'
+  footer_right: 'Pie derecho'
   colophon: 'Colofón'
   # Home
   landing: 'Bloque de aterrorizaje '
