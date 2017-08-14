@@ -1,0 +1,71 @@
+// Cookies compliance popup, defined by EU Cookie Compliance
+// @see https://www.drupal.org/project/eu_cookie_compliance
+
+// TODO: change markup to use a not-generic BEM namespace 
+// and avoid important clausules
+
+@import compass/css3/border-radius
+@import compass/css3/box-shadow
+@import compass/css3/animation
+
+
+#sliding-popup
+  padding: $m
+  left: $m*2.5
+  right: inherit
+  bottom: $m !important
+  width: 480px !important
+  max-width: 100%
+  background-color: #D00136 !important
+  h2, p
+    color: white !important
+    text-align: center !important
+  h2
+    line-height: 1.1 !important
+
+#sliding-popup:before
+  content: "ℹ ◀"
+  color: #D00136
+  position: absolute
+  font-size: 2em
+  left: -45px
+  top: calc(50% - 1em)
+
+
+#sliding-popup .popup-content #popup-buttons button
+  +reset_button
+  +border-radius(0)
+  +box-shadow(none)
+  font-size: .9em
+  color: $palette_brown
+  &:hover
+    outline: 1px solid $palette_brown
+
+#sliding-popup .popup-content
+  max-width: 100%
+
+#sliding-popup .popup-content #popup-text
+  float: none
+  max-width: 100%
+
+#sliding-popup .popup-content #popup-buttons
+  float: none
+  max-width: 100%
+
+#sliding-popup .popup-content #popup-text h2
+  font-size: 1.25rem
+#sliding-popup .popup-content #popup-text p
+  font-weight: 300
+
+.agree-button:before
+  content: "✓"
+  font-family: sans-serif
+  color: white
+  margin-right: $m/3
+
+.find-more-button:before
+  content: "❌"
+  font-family: sans-serif
+  color: white
+  margin-right: $m/3
+

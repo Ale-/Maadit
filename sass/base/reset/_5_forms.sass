@@ -44,3 +44,37 @@
   text-transform: uppercase
   font-size: .75em
   +inline-block
+
+=button_box
+  line-height: 40px
+  text-transform: uppercase
+  padding: 0 $m/2
+  letter-spacing: 2px
+  font-weight: 400
+  font-size: .9em
+  +transition(background-color, .15s ease)
+  border: 2px solid white
+
+=button_box_white
+  +button_box
+  background-color: #DF0136
+  border-color: white
+  color: white
+  &:hover
+    background: white
+    color: $palette_magenta
+
+=button_box_magenta
+  +button_box
+  color: $palette_magenta
+  background: white
+  border-color: $palette_magenta
+  &:hover
+    background: $palette_magenta
+    color: white
+
+=reset_button
+  background: none !important
+  border: none !important
+  +text-shadow(none !important)
+
