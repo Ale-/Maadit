@@ -18,9 +18,11 @@
 .quotes__item
   text-align: center
   position: absolute
-  left: calc(50% - 240px)
   top: $m
   width: 480px
+  max-width: 100%
+  +breakpoint('md')
+    left: calc(50% - 240px)
   opacity: 0
 
 +keyframes(slideshow)
