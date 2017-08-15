@@ -1,0 +1,40 @@
+// Slideshow block of quotes
+
+@import compass/css3/animation
+
+.quotes
+  position: relative
+  min-height: $m*10
+
+.quotes__item-quote
+  font-weight: 900
+  font-size: 1.5em
+
+.quotes__item-author
+  font-weight: 400
+  font-size: 1em
+  margin-top: $m/3
+
+.quotes__item
+  text-align: center
+  position: absolute
+  left: calc(50% - 240px)
+  top: $m
+  width: 480px
+  opacity: 0
+
++keyframes(slideshow)
+  10%
+    opacity: 1
+  50%
+    opacity: 1
+  60%
+    opacity: 0
+  100%
+    opacity: 0
+
+.quotes__item:first-child
+  +animation(slideshow 14s linear 0s infinite)
+
+.quotes__item:nth-child(2)
+  +animation(slideshow 14s linear 7s infinite)

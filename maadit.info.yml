@@ -8,12 +8,14 @@ description: 'Tema principal de Maadix. Basado en Classy.'
 base theme: classy 
 libraries:
   - maadit/styles
+  - maadit/scripts
 regions:
   # Common
   navigation: 'Navegación'
   messages: 'Mensajes de sistema'
   header: 'Cabecera'
   content: 'Contenido principal'
+  postface: 'Post-fascio'
   footer_left: 'Pie izquierdo'
   footer_right: 'Pie derecho'
   colophon: 'Colofón'
