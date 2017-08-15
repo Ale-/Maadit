@@ -78,3 +78,36 @@
   border: none !important
   +text-shadow(none !important)
 
+=form_boxed_dotted_lines
+  color: white
+  position: relative
+  border: 2px solid white
+  padding: $m $m*2 $m*3
+  .form-item
+    margin-bottom: $m
+  input[type=text],
+  input[type=password],
+  input[type=email],
+    border: 1px dashed white
+    border-width: 0 0 1px 0 
+    background: none
+  #edit-submit
+    +button_box_white
+    position: absolute
+    line-height: $m*2
+    bottom: -$m
+    width: $m*10
+    left: calc(50% - #{$m*5})
+  textarea
+    border: 1px dashed white
+    background: none
+  .description
+    text-indent: $m
+    margin-top: $m/3
+  label
+    +h(5)
+    display: block
+    text-transform: uppercase
+    margin-bottom: $m/3
+
+

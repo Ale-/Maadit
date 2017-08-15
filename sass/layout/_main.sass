@@ -1,0 +1,36 @@
+// Layout for the content section
+
+
+// Most cases
+
+.layout-content--displaced
+  margin-left: 25%
+  border: 2px solid white
+  border-width: 2px 0 2px 2px
+
+  .region-content
+    +container-fixed
+    padding: $m*2 0 $m*4
+    color: white
+    max-width: 50% !important
+
+.region-content
+  position: relative
+
+
+// Layout of user form pages (login, signin, password)
+
+.path-user .layout-content
+  margin: 0
+  background: none
+
+.path-user,
+.path-contact 
+  .region-content
+    +container-fixed
+    padding: $m*5 $m $m*4
+    position: relative
+    width: 640px
+    max-width: 100%
+    background: none
+    +sticky_footer--no-header--no-footer
