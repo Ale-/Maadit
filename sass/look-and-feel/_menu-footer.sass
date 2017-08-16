@@ -1,0 +1,24 @@
+// Footer menu
+
+.menu--footer
+  text-transform: uppercase
+  font-size: .9em
+  letter-spacing: 2px
+  +links_white_brown
+  a.is-active
+    +links_white_brown
+
+.menu--footer:before
+  content: "Maadix.net"
+  display: inline-block
+  margin-bottom: $m/2
+  border-bottom: 1px dashed white
+  font-weight: 400
+  text-transform: uppercase
+  color: white
+
+.menu--footer .menu
+  margin-left: 0
+
+.menu--footer .menu-item
+  opacity: .75

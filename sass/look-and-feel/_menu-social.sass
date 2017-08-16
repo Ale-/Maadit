@@ -1,0 +1,16 @@
+// Social links menu
+
+[class^='social-menu__item--']
+  font-size: $m
+  +links_white_brown
+  margin-bottom: $m
+[class^='social-menu__item--']:last-child
+  margin-bottom: 0
+
++breakpoint('xs')
+  .social-menu
+    margin-top: $m
+    text-align: center
+  [class^='social-menu__item']
+    display: inline
+    margin: 0 $m/2

@@ -1,0 +1,23 @@
+// Language switching block
+
+.language-switcher-language-url
+  display: inline-block
+  float: right
+  color: white
+  font-size: .9em
+  font-weight: 300
+  +breakpoint('xs')
+    margin-right: $m
+  .is-active
+    font-weight: 400
+
+.language-switcher-language-url ul.links
+  +links_white_magenta
+  li
+    opacity: .75
+  .is-active
+    opacity: 1
+
+.language-switcher-language-url ul.links li
+  display: inline
+  margin-left: $m/3

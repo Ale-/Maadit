@@ -1,0 +1,43 @@
+// Main menu
+
+@import compass/css3/text-shadow
+@import compass/css3/transition
+
+
+#block-maadit-main-menu
+  +links_white_white
+  text-transform: uppercase
+  letter-spacing: 2px
+  +text-shadow(0 0 5px rgba(black, .5))
+  font-size: .9em
+  .menu-item
+    display: inline
+
+// Menu items
+#block-maadit-main-menu .menu-item
+  margin-right: $m
+  line-height: 32px
+  display: inline-block
+  position: relative
+  // Hover effect
+  &:after
+    +transition(width .5s ease)
+    content: " "
+    position: absolute
+    border-bottom: 2px solid $palette_magenta
+    left: 0
+    bottom: 2px
+    width: 0%
+  &:hover:after
+    width: 100%
+  
+#block-maadit-main-menu li:first-child
+  font-weight: 900
+
+// Active link
+#block-maadit-main-menu .menu-item--active-trail:after
+  border-color: white
+  width: 100%
+#block-maadit-main-menu .menu-item--active-trail
+  a:hover
+    color: white !important

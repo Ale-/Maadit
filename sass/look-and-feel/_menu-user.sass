@@ -1,0 +1,28 @@
+// User actions menu
+
+#block-maadit-account-menu
+  text-transform: uppercase
+  letter-spacing: 2px
+  +links_white_magenta
+  +text-shadow(0 0 5px rgba(black, .5))
+  font-size: .9em
+  .menu-item
+    display: inline
+
+// Mixin that 'substitutes' text in link with a given icon
+=user_icons($content)
+  font-size: 0
+  &:after
+    content: $content
+    +icons
+    font-size: 18px !important
+    line-height: $m*2
+
+// Important: keep boundary, Drupal uses this links in more places
+#block-maadit-account-menu 
+  [data-drupal-link-system-path='user/login'],
+  [data-drupal-link-system-path='user']
+    +user_icons("\e901")
+  [data-drupal-link-system-path='user/logout']
+    +user_icons("\e900")
+

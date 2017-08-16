@@ -1,0 +1,31 @@
+// Icon to trigger menu in responsive layouts
+// @see js/style.js
+// @see sass/regions/_navigation.sass 
+
+@import compass/css3/transition
+
+#block-navigationtrigger
+  float: left
+  display: inline-block
+  line-height: 48px
+  +breakpoint('sm')
+    display: none
+
+// Classic menu icon with three stripes, done with HTML
+// Check sass/regions/_navigation.sass 
+// to see behavior triggered when navigation is open
+
+.menu-trigger
+  width: $m
+  margin: 10px 0 0 $m
+  &:hover
+    cursor: pointer
+
+.menu-trigger--stripe
+  display: block
+  height: 4px
+  background: white
+  margin-bottom: 4px
+  +transition(transform .25s ease)
+  &:last-child
+    margin-bottom: 0
