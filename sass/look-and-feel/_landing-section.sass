@@ -1,0 +1,56 @@
+// Landing block
+
+@import compass
+@import compass/css3/animation
+@import compass/css3/transition
+
+.region-landing
+  min-height: 100vh
+  padding: 100px calc(50vw - 240px)
+
+.toolbar-fixed .region-landing
+  padding-top: 140px
+
+#block-imagendenubes
+  +animation(showup 2s)
+  object
+    max-width: 100%
+
+#block-imagendenubes,
+#block-textoinicial
+  display: inline-block
+  width: 480px
+
+#block-textoinicial
+  color: white
+  text-align: center
+  margin-top: $m
+
+.site-name__title
+  text-transform: uppercase
+  margin-bottom: 0
+  font-size: 3rem
+.site-name__subtitle
+  margin-top: 0
+  text-transform: uppercase
+  margin-bottom: $m
+.site-explanation__text-a,
+.site-explanation__text-b
+  font-size: 1.25em
+.site-explanation__text-b
+  font-weight: 400
+  margin-top: $m
+
+.landing-actions
+  margin-top: $m
+  +links_box_white
+  a
+    font-weight: 900
+    letter-spacing: 2px
+    display: inline-block
+    line-height: 40px
+    text-transform: uppercase
+    padding: 0 $m/2
+
+.landing-actions__signin
+  margin-right: $m/2

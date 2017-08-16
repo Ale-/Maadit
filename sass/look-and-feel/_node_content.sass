@@ -1,0 +1,34 @@
+// Content of pages and other nodes
+
+.node__content
+  +links_weight_dotted_white
+  padding-top: $m*3
+
+  h2
+    font-weight: 300
+    font-size: 1.4rem
+    border-bottom: 2px solid white
+    border-top: 2px solid white
+    text-transform: uppercase
+    margin-bottom: $m*1.5
+    padding: $m/3 0
+  h4
+    font-weight: 300
+    font-size: 1.2rem
+    border-bottom: 1px solid white
+    text-transform: uppercase
+    margin-bottom: $m/2
+    padding: $m/3 0
+
+  p, li
+    margin-bottom: $m/3
+    text-align: justify
+    font-size: 1.1em
+
+  h2 + p:first-letter,
+  h2 + section p:first-child:first-letter
+    font-size: 4em
+    border: 1px solid white
+    float: left
+    padding: $m/2
+    margin-right: $m/4

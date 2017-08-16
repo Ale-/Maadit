@@ -40,14 +40,15 @@ $color_warning : #f0ad4e
 $color_danger  : #d9534f
 
 // Site palette
-// Pink
 $palette_magenta : #ff0158
+$palette_brown   : #360012
+
 
 // Element colors
 $color_background           : white
 $color_text                 : #333
 $color_headers              : white
-$color_header_background    : #222
+$color_header_background    : none
 $color_header_text          : $color_text
 $color_footer_background    : #222
 $color_footer_text          : white
@@ -64,11 +65,11 @@ $menu_breakpoint: 960px
 //
 
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,900')
-$icons: "fontawesome/fontawesome"
-+font-face('grrr_icons', font-files("#{$icons}.woff", "#{$icons}.ttf", "#{$icons}.eot", "#{$icons}.svg"))
+$icons: "icons/icons"
++font-face('icons', font-files("#{$icons}.woff", "#{$icons}.ttf", "#{$icons}.eot", "#{$icons}.svg"))
 $font_text           : 'Fira Sans', sans-serif
 $font_headers        : 'Fira Sans', sans-serif
-$font_icons          : 'grrr_icons'
+$font_icons          : 'icons'
 $font_text_weight    : 300
 $font_headers_weight : 900
 
@@ -77,4 +78,3 @@ $size_headers  : (2rem, 1.75rem, 1.5rem, 1.25rem, 1rem, 0.85rem)
 $size_big      : 1.25em
 $size_small    : 0.8em
 $size_smaller  : 0.75em
-
