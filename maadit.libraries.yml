@@ -5,4 +5,17 @@ styles:
   css:
     theme:
       css/style.css: {}
+
+scripts:
+  version: 1.0 
+  js: 
+    js/style.js: {}
+  dependencies:
+    - core/jquery
+
+maintenance:
+  version: 1.0 
+  css:
+    theme:
+      css/maintenance.css: {}
                         
