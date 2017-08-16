@@ -1,0 +1,63 @@
+// Navigation toolbar region
+
+@import compass/css3/transform
+
+.region-navigation
+  position: fixed
+  z-index: 10000
+  top: 0
+  left: 0
+  width: 100%
+  line-height: $m*2
+  height: $m*2
+  background-color: #9F0036
+  padding: 0 $m
+  font-family: $font_text
+
+// Fix position when Drupal's toolbar is active
+.toolbar-tray-open .region-navigation
+  left: 239px
+
+.toolbar-fixed .region-navigation
+  top: 40px
+
+// Menus layout
+#block-maadit-main-menu,
+#block-maadit-branding,
+#block-maadit-account-menu
+  display: inline-block
+
+#block-maadit-account-menu
+  float: right
+
+// Hide navigation menus in responsive layouts
++breakpoint('xs')
+  #block-maadit-main-menu,
+  #block-maadit-account-menu
+    display: none !important
+
+// Display responsive menu when open -- @see js/style.js
+.region-navigation--open
+  min-height: 100vh
+  #block-maadit-main-menu
+    margin-bottom: $m*2
+  #block-maadit-main-menu,
+  #block-maadit-account-menu
+    display: block !important
+  .menu-item
+    display: block !important
+    text-align: center
+    line-height: $m*2
+  #block-navigationtrigger
+    display: block
+    width: 100%
+    margin-bottom: $m*3
+
+// Update navigation trigger to 'open' state -- X shape
+.region-navigation--open
+  .menu-trigger--stripe:first-child
+    +transform(translateY(6px) rotate(45deg))
+  .menu-trigger--stripe:nth-child(2)
+    opacity: 0
+  .menu-trigger--stripe:last-child
+    +transform(translateY(-10px) rotate(-45deg))

@@ -5,6 +5,7 @@
 @import compass/css3/text-shadow
 @import text_to_header
 @import sticky_footer
+@import compass
 
 *
   box-sizing: border-box
@@ -14,7 +15,7 @@ html
 
 body
   position: relative
-  background-color: $color_background
+  +background-image(linear-gradient(darken($palette_magenta, 20%), adjust-hue($palette_magenta, 8%)))
   cursor: crosshair
 
 main, aside.layout-sidebar

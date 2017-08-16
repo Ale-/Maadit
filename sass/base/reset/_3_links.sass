@@ -27,6 +27,14 @@
     &:active
       color: $normal
 
+=link_white_white
+  &:link, &:visited, &:active, &:hover
+    color: white
+
+=links_white_white
+  a
+    +link_white_white
+    
 =link_white_magenta
   +default_color_transition
   &:link, &:visited
@@ -39,6 +47,11 @@
 =links_white_magenta
   a
     +link_white_magenta
+
+=links_white_magenta_dotted
+  a
+    +link_white_magenta
+    border-bottom: 1px dotted white
 
 =link_magenta_white
   +default_color_transition
@@ -66,6 +79,33 @@
   a
     +link_brown_magenta
 
+=link_magenta_brown
+  +default_color_transition
+  &:link, &:visited
+    color: $palette_magenta
+  &:hover
+    color: $palette_brown
+  &:active
+    color: $palette_magenta
+
+=links_magenta_brown
+  a
+    +link_magenta_brown
+
+=link_white_brown
+  +default_color_transition
+  &:link, &:visited
+    color: white
+  &:hover
+    color: $palette_brown
+  &:active
+    color: white
+
+=links_white_brown
+  a
+    +link_white_brown
+
+
 =link_box_white
   border: 1px solid white
   +transition(background-color, .15s ease)
@@ -80,3 +120,18 @@
 =links_box_white
   a
     +link_box_white
+
+=link_weight_dotted_white
+  &
+    color: white
+    font-weight: 400
+    border-bottom: 1px dotted white
+  &:hover
+    color: rgba(white, .75)   
+  &:active
+    color: white
+
+=links_weight_dotted_white
+  a
+    +link_weight_dotted_white
+  

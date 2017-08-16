@@ -1,0 +1,15 @@
+// Layout of footer region
+
+
+footer[role=contentinfo]
+  +container-fluid
+  font-family: $font_text
+  padding: $m 0
+  border-top: 2px solid white
+
+.region-footer-left,
+.region-footer-right
+  +column(6, 'sm', $m*2)
+
+.region-footer-right
+  text-align: right
