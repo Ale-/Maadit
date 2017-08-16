@@ -1,0 +1,38 @@
+{#
+/**
+ * @file
+ * Theme override to display a single Drupal page while offline.
+ *
+ * All available variables are mirrored in page.html.twig.
+ * Some may be blank but they are provided for consistency.
+ *
+ * @see template_preprocess_maintenance_page()
+ */
+#}
+
+<div class="layout-container">
+
+  <header role="banner">
+     {# <object class="maintenance__image" type="image/svg+xml" data="/themes/custom/Maadit/img/maintenance-header_image.svg" ></object> #}
+     {% include '@maadit/svg/maintenance.html' %}
+     <h1 class="maintenance__site-name">
+       maadix.net
+     </h1>
+
+     {% if site_slogan %}
+       <div class="maintenance__site-slogan">{{ site_slogan }}</div>
+     {% endif %}
+  </header>
+
+  <main role="main">
+    {% if title %}
+        <h1 class="maintenance__page-title">
+            {{ title }}
+        </h1>
+    {% endif %}
+    <div class="maintenance__page-content">
+        {{ page.content }}
+    </div>
+  </main>
+
+</div>{# /.layout-container #}

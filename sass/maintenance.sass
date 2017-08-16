@@ -1,0 +1,44 @@
+// Maintenance stylesheet
+
+@import compass/css3
+@import variables
+@import base/reset/_4_animations.sass
+
+
+.maintenance-page
+  min-height: 100vh
+  +background-image(linear-gradient(darken($palette_magenta, 20%), adjust-hue($palette_magenta, 8%)))
+  padding: 100px calc(50vw - 240px)
+  color: white
+  text-align: center
+  font-family: $font_text
+
+.maintenance__site-name, 
+.maintenance__site-slogan
+  text-transform: uppercase
+  margin-bottom: 0
+  padding: 0 $m
+
+.maintenance__site-name
+  margin-top: $m*2
+
+.maintenance__page-title
+  line-height: 1.1
+  margin: $m
+  padding: $m 0
+  font-weight: 300
+  text-transform: uppercase
+  letter-spacing: 2px
+  font-size: 1.6rem
+  border-top: 1px dashed white
+  border-bottom: 1px dashed white
+
+.maintenance-page
+  svg
+    max-width: 100%
+    overflow: visible
+  path
+    +transition(fill-opacity .2s ease)
+  path:hover
+    fill-opacity: 0 !important
+    

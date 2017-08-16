@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the theme.
+ */
+     
+
+/** Add maintenance library to theme's */
+
+function maadit_preprocess_maintenance_page(&$variables) {
+    $variables['#attached']['library'] = 'maadit/maintenance';
+}
+       
