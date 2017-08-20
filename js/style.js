@@ -25,4 +25,12 @@
         $('.region-navigation').toggleClass('region-navigation--open');
     });
 
+
+    // Shopping cart enhancements
+    var n = $('.cart-block--summary__count').text().split(" ");
+    if(n[0] !== '0'){
+        $('#block-maadit-cart').show();
+        $('.cart-block--summary__count').text("(" + n[0] + ")");
+    }
+
 })(jQuery);
