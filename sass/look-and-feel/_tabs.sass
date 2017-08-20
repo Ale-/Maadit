@@ -6,18 +6,26 @@
     text-transform: uppercase
     font-size: .9em
     letter-spacing: 2px
-    position: absolute
-    width: 100%
-    top: -12px
     +links_white_magenta
+    +breakpoint('xs')
+      margin-bottom: -$m*3
+    +breakpoint('sm')
+      position: absolute
+      width: 100%
+      top: -12px
 
   #block-maadit-local-tasks .tabs 
     text-align: center
 
   #block-maadit-local-tasks .tabs li
-    border: 1px solid white
+    border: 1px solid #990D2E
     background-color: #9F0036
     height: $m
+    +breakpoint('xs')
+      display: block
+      border-width: 0 0 1px 0
+      &:last-child
+        border: 0
 
   #block-maadit-local-tasks .tabs a.is-active
     background: none

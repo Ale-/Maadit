@@ -3,16 +3,28 @@
 
 // Most cases
 
-.layout-content--displaced
-  margin-left: 25%
-  border: 2px solid white
-  border-width: 2px 0 2px 2px
-
+.layout-content 
   .region-content
-    +container-fixed
     padding: $m*2 0 $m*4
     color: white
-    max-width: 50% !important
+
+.layout-content--wide
+  border: 2px solid white
+  border-width: 2px 0
+  .region-content
+    +container-fixed
+
+.layout-content--displaced
+  padding: $m
+  border: 2px solid white
+  border-width: 2px 0
+  +breakpoint('sm')
+    padding: 0
+    margin-left: 25%
+    border-width: 2px 0 2px 2px
+    .region-content
+      max-width: 66% !important
+      margin: 0 auto
 
 .region-content
   position: relative

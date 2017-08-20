@@ -24,5 +24,17 @@
   [data-drupal-link-system-path='user']
     +user_icons("\e901")
   [data-drupal-link-system-path='user/logout']
-    +user_icons("\e900")
+    +user_icons("\e902")
 
+#block-maadit-cart
+  display: none
+  float: right
+  +links_white_magenta
+  .cart-block--summary__icon
+    img
+      display: none
+    +user_icons("\e900")
+    
+.cart-block--summary__count
+  font-size: .9em
+  vertical-align: top

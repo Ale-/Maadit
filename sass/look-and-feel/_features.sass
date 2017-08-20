@@ -1,0 +1,75 @@
+// Software features. 
+// First block of features in the frontpage
+
+.software-features,
+.other-features
+  color: white
+  position: relative
+  text-align: center
+  +links_box_white
+  +breakpoint('sm')
+    padding: $m*2 $m*4
+    border-top: 2px solid white
+
+.software-features,
+  margin: $m*2
+.other-features
+  margin: 0 $m*2
+
+
+.software-features__title,
+.other-features__title
+  border: 2px solid white
+  border-width: 0 2px
+  line-height: $m*2
+  padding: $m*2 $m
+  +breakpoint('sm')
+    position: absolute
+    top: -$m*2
+    padding: 0 $m*3
+
+.software-features__title,
+  background: #BD0035
+.other-features__title
+  background: #D80136
+
+.software-features__list,
+.other-features-list
+  +clearfix
+
+.software-features__list-item,
+.other-features__list-item
+  padding: $m/2
+  margin-bottom: $m*2
+  +breakpoint('sm')
+    display: inline- block
+    float: left
+    width: 20%
+    margin-bottom: 0
+
+.software-features__list-item-image,
+.other-features__list-item-image
+  max-width: 75%
+  +breakpoint('sm')
+    max-height: 100%
+    max-width: 50%
+    height: 100px
+
+.software-features__list-item-subtitle,
+.other-features__list-item-subtitle
+  text-transform: uppercase
+  font-weight: 400
+  border-bottom: 1px solid rgba(black, .25)
+  padding-bottom: $m/2
+  margin-bottom: $m/2
+
+.software-features__button,
+.other-features__button,
+  margin: $m $m
+  font-weight: 400
+  letter-spacing: 2px
+  display: inline-block
+  line-height: 40px
+  text-transform: uppercase
+  padding: 0 $m/2
+  border-width: 2px
