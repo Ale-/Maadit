@@ -1,0 +1,22 @@
+<svg id="svg8406" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="57.645mm" width="64.086mm" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 227.0773 204.25375">
+ <g id="layer1" transform="translate(-258.51 -424.05)">
+  <g id="g8643" transform="translate(-356.22 344.58)" stroke="#360012" fill="none">
+   <g id="g7492" transform="translate(7626.4 -2337.1)">
+    <path id="path7460" stroke-linejoin="round" style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" stroke-linecap="round" stroke-width="5" d="m-6967.2 2618.4-41.928-24.208v-48.415l41.928-24.207 41.928 24.207v48.415z"/>
+    <g stroke-width="1px">
+     <path id="path7464" d="m-7009.2 2545.7 41.929 24.208"/>
+     <path id="path7466" d="m-6925.3 2545.7-41.928 24.208"/>
+     <path id="path7468" d="m-6967.2 2570v48.415"/>
+    </g>
+   </g>
+   <g id="g7515" transform="translate(7127.2 -2320.2)">
+    <path id="path7484" stroke-linejoin="round" style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;image-rendering:auto" d="m-6371.5 2593.3-82.108-47.405v-94.81l82.108-47.405 82.108 47.405v94.81z" stroke-linecap="round" stroke-width="8"/>
+    <g stroke-width="4">
+     <path id="path7486" d="m-6453.6 2451 82.108 47.405"/>
+     <path id="path7488" d="m-6289.4 2451-82.107 47.405"/>
+     <path id="path7490" d="m-6371.5 2498.5v94.81"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
