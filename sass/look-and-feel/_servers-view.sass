@@ -1,0 +1,94 @@
+// View of servers/products
+
+=icon_servers($icon)
+  &:before
+    +icons
+    content: $icon
+    color: $palette_brown
+    margin-right: $m/3
+    display: inline-block
+    text-align: center
+    width: $m
+
+.path-servers
+  .view-servers-view
+    +clearfix
+    line-height: $m*2
+    .view-header
+      display: none
+      +breakpoint('sm')
+        display: block
+        width: 20%
+        display: inline-block
+        float: left
+        margin-top: 62px
+      +h(5)
+      .month,
+      .trim,
+      .year
+        +icon_servers("\f153")
+      .hd
+        +icon_servers("\f187")
+      .ram
+        +icon_servers("\f0e4")
+      .cores
+        +icon_servers("\f233")
+    .server-row__prefix
+      color: $palette_brown
+      margin-right: $m/2
+      display: inline-block
+      width: $m*8
+      +breakpoint('sm')
+        display: none
+    .views-field-title
+      height: $m*2
+    .view-content
+      +breakpoint('sm')
+        width: 80%
+        display: inline-block
+        float: right
+        +clearfix
+      li
+        margin: 0
+        padding: $m
+        font-weight: 400
+        +links_box_white
+        +breakpoint('sm')
+          text-align: center
+          padding: 0
+          display: inline-block
+          width: 25%
+          float: left
+      a
+        display: inline-block
+        margin-top: $m
+        line-height: $m*2
+        padding: 0 $m/2
+        text-transform: uppercase
+        font-size: .9em
+        letter-spacing: 2px
+        border-width: 2px
+    .view-footer
+      clear: both
+      padding: 0 $m
+      line-height: 1.1
+      padding-top: $m*2
+      text-transform: uppercase
+      font-size: .9em
+      color: $palette_brown
+      font-weight: 400
+      text-align: center
+      +breakpoint('sm')
+        text-align: right
+    .server-row
+      border-top: 2px solid white
+    .views-field-title
+      +h(4)
+
+.servers-text
+  font-size: 1.5em
+  margin: $m 0
+  padding: $m
+  +breakpoint('sm')
+    width: 50%
+    float: right
