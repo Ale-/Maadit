@@ -15,6 +15,7 @@ regions:
   messages: 'Mensajes de sistema'
   header: 'Cabecera'
   content: 'Contenido principal'
+  sidebar: 'Contenido lateral'
   postface: 'Post-fascio'
   footer_left: 'Pie izquierdo'
   footer_right: 'Pie derecho'
