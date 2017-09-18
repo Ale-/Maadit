@@ -1,24 +1,27 @@
 // Footer menu
 
-.menu--footer .menu
-  text-transform: uppercase
-  font-size: .9em
-  letter-spacing: 2px
-  +links_white_brown
-  a.is-active
-    +links_white_brown
+.menu--footer,
+.menu--documentacion-tecnica
+  .menu
+    text-transform: uppercase
+    font-size: .8em
+    letter-spacing: 2px
+    margin-left: 0
+    a.is-active
+      +links_white_magenta
+  .menu-item
+    margin-bottom: $m/3
 
-.menu--footer:before
-  content: "Maadix.net"
-  display: inline-block
-  margin-bottom: $m/2
-  border-bottom: 1px dashed white
+#block-documentaciontecnica-menu,
+#block-piedepagina-menu
   font-weight: 400
   text-transform: uppercase
+  font-size: .8em
+  letter-spacing: 2px
   color: white
-
-.menu--footer .menu
-  margin-left: 0
-
-.menu--footer .menu-item
+  font-size: .8em
+  text-decoration: underline
   opacity: .75
+
+#block-piedepagina-menu
+  margin-top: $m !important

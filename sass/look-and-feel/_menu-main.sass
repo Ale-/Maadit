@@ -4,15 +4,15 @@
 @import compass/css3/transition
 
 
-#block-maadit-main-menu
+#block-maadit-main-menu .menu
   +links_white_white
   text-transform: uppercase
   letter-spacing: 2px
   clear: both
   +text-shadow(0 0 5px rgba(black, .5))
   font-size: .9em
-  .menu-item
-    display: inline
+  li:first-child
+    font-weight: 900
 
 // Menu items
 #block-maadit-main-menu .menu-item
@@ -25,16 +25,13 @@
     +transition(width .5s ease)
     content: " "
     position: absolute
-    border-bottom: 2px solid $palette_magenta
+    border-bottom: 2px solid lighten($palette_magenta, 10%)
     left: 0
     bottom: 2px
     width: 0%
   &:hover:after
     width: 100%
   
-#block-maadit-main-menu li:first-child
-  font-weight: 900
-
 // Active link
 #block-maadit-main-menu .menu-item--active-trail:after
   border-color: white

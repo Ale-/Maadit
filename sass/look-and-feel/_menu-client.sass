@@ -1,0 +1,49 @@
+// Sidebar menu in client area
+
+=client_action_icon($content)
+  &:before
+    +icons
+    content: $content
+    margin-right: $m/2
+    color: $palette_magenta
+
+#block-clientlinks
+  .item-list > h3
+    display: none
+  padding-top: $m
+  .nav-tabs li
+    display: block
+    +links_brown_magenta
+    line-height: $m*1.5
+    text-transform: uppercase
+    margin-right: 0
+    font-size: .9em
+    letter-spacing: 2px
+    border-bottom: 1px dashed rgba($palette_brown, .5)
+  li.is-active
+    border-bottom: 2px solid $palette_brown
+  a.is-active
+    font-weight: 400
+    background-color: transparent
+  .nav-tabs li:first-child
+    +client_action_icon("\f233")
+    border-top: 1px dashed rgba($palette_brown, .5)
+  .nav-tabs li:nth-child(2)
+    +client_action_icon("\f24d")
+  .nav-tabs li:nth-child(3)
+    +client_action_icon("\f0e6")
+  .nav-tabs li:nth-child(4)
+    +client_action_icon("\f0e5")
+  .nav-tabs li:nth-child(5)
+    +client_action_icon("\f2bd")
+  .nav-tabs li:nth-child(6)
+    +client_action_icon("\f2b9")
+  .nav-tabs li.active
+    font-weight: 400
+    border-bottom: 2px solid $palette_brown
+    
+
+
+
+
+

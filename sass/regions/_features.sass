@@ -1,0 +1,26 @@
+// Regions that hold Maadix features in the frontpage
+
+.region-features-head,
+.region-features-tail
+  position: relative
+  // Set shaped borders
+  &:before
+    content: ""
+    width: 100%
+    position: absolute
+    z-index: 100
+    top: -23px
+    left: 0
+    border: 24px solid transparent
+    border-width: 24px 0 0 0
+    border-image: url('/themes/custom/maadit/img/triangles-border--top.svg') 48 1 round
+  &:after
+    content: ""
+    width: 100%
+    position: absolute
+    z-index: 100
+    bottom: 1px
+    left: 0
+    border: 24px solid transparent
+    border-width: 24px 0 0 0
+    border-image: url('/themes/custom/maadit/img/triangles-border--bottom.svg') 48 1 round

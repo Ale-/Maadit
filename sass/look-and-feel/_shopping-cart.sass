@@ -1,0 +1,78 @@
+// Shopping cart page
+
+.path-cart
+  #edit-actions
+    display: inline-block
+    width: 50%
+    float: left
+    margin-top: 0
+    text-align: center
+    input
+      +button_box_magenta
+      letter-spacing: 2px
+      text-transform: uppercase
+      line-height: $m*2
+  .views-label-remove-button
+    display: none
+  .region-content
+    padding: $m*3 0
+    width: 480px
+    max-width: 100%
+    margin: 0 auto
+    text-align: center
+    text-transform: uppercase
+  .views-field
+    border-bottom: 1px dashed $palette_magenta
+    line-height: $m*2
+  .views-field-remove-button
+    border-bottom: 0
+    display: inline-block
+    width: 50%
+    text-align: center
+    float: right
+    input
+      +button_box_magenta
+      letter-spacing: 2px
+      text-transform: uppercase
+      line-height: $m*2
+  .views-field-order-items
+    +h(4) 
+    border-bottom: 2px solid $palette_brown
+  .views-field-total-price__number-1
+    border-bottom: 0
+    margin-bottom: $m
+    +h(5)
+  .cart-form
+    +clearfix
+  .cart-form:before
+    +icons
+    content: "\f233"
+    color: $palette_brown
+    font-size: 5em
+    margin-bottom: $m
+    display: block
+    margin: 0 auto
+  .fake-breadcrumb
+    font-size: .9em
+    position: absolute
+    top: $m
+    left: -$m*8
+    font-weight: 400
+    &:hover
+      cursor: pointer
+
+// Empty view
+
+.cart-empty-page
+  font-weight: 300
+  font-size: 1.5em
+  text-align: center
+  margin: $m*2 auto
+
+  &:before
+    +icons
+    content: "\e900"
+    display: block
+    font-size: 4em
+    color: rgba(black, .2)
+    margin-bottom: $m

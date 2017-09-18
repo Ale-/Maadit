@@ -16,7 +16,6 @@ html
 body
   position: relative
   +background-image(linear-gradient(#C60035, adjust-hue($palette_magenta, 8%)))
-  cursor: crosshair
 
 main, aside.layout-sidebar
   font-family: $font_text
@@ -80,8 +79,3 @@ select
 ::selection
   background: $color_selection_background
   color: $color_selection_text
-
-// Sticky footer
-@if $apply_sticky_footer
-  html
-    +sticky_footer

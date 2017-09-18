@@ -1,0 +1,36 @@
+// Login/Register page after checkout process
+
+#edit-login
+  overflow: inherit
+
+#edit-login-returning-customer,
+#edit-login-register
+  +form_boxed_dotted_lines
+  +links_white_magenta
+  a
+    border-bottom: 1px dotted white
+  .fieldset-legend
+    +h(2)
+    padding: 0 $m/2
+  .password-strength__title,
+  .password-confirm
+    font-size: .9em 
+    display: inline-block
+    padding-top: $m/3
+  .password-strength__meter
+    background-color: rgba(black, .15)
+  input[type=submit]
+    +button_box_white
+    position: absolute
+    bottom: -$m
+  .password-strength__text
+    font-weight: 900
+  .description
+    color: $palette_brown
+  .ok, .error
+    color: white
+  .password-suggestions
+    border: none
+    padding: $m/2
+    background-color: rgba(black, .15)
+    color: white

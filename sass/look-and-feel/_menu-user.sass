@@ -3,7 +3,7 @@
 #block-maadit-account-menu
   text-transform: uppercase
   letter-spacing: 2px
-  +links_white_magenta
+  +links_white_brown
   +text-shadow(0 0 5px rgba(black, .5))
   font-size: .9em
   .menu-item
@@ -29,7 +29,7 @@
 #block-maadit-cart
   display: none
   float: right
-  +links_white_magenta
+  +links_white_brown
   .cart-block--summary__icon
     img
       display: none
@@ -38,3 +38,45 @@
 .cart-block--summary__count
   font-size: .9em
   vertical-align: top
+
+
+.cart-block--contents
+  width: 360px
+  +border-radius($m/4)
+  padding: $m/2
+  text-align: center
+  background: lighten($palette_brown, 10%)
+  line-height: 1.2
+  overflow: inherit
+  color: white
+  right: $m !important
+  &:before
+    content: "▲"
+    color: lighten($palette_brown, 10%)
+    font-size: 1.5em
+    position: absolute
+    top: -20px
+    right: $m*6
+    z-index: 900
+  .views-field-quantity
+    float: left
+    margin-right: $m/3
+  .views-field-title
+    float: left
+  .views-field-total-price__number
+    float: right
+  .views-field-quantity,
+  .views-field-title
+    font-weight: 400
+  .views-row
+    +clearfix
+    line-height: $m
+  .cart-block--contents__links
+    text-transform: uppercase
+    font-size: .9em
+    font-weight: 900
+    margin-top: $m/2
+
+
+.cart-block--contents__items
+  overflow-y: auto

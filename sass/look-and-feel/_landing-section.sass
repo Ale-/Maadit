@@ -5,10 +5,13 @@
 @import compass/css3/transition
 
 .region-landing
-  min-height: 100vh
-  padding: 100px calc(50vw - 240px)
+  padding: $m*5 $m*2
+  +breakpoint('sm')
+    min-height: 50vh
+  //min-height: 100vh
+  //padding: 100px calc(50vw - 240px)
 
-.toolbar-fixed .region-landing
+//.toolbar-fixed .region-landing
   padding-top: 140px
 
 #block-imagendenubes
@@ -20,27 +23,31 @@
 #block-textoinicial
   display: inline-block
   width: 480px
+  position: relative
   +breakpoint('xs')
     padding: $m
     max-width: 100%
 
 #block-textoinicial
   color: white
-  text-align: center
-  margin-top: $m
+  margin-left: $m*2 
+  top: -$m*2
+  //text-align: center
+  //margin-top: $m
 
 .site-name__title
   text-transform: uppercase
-  margin-bottom: 0
+  margin: 0 !important
   font-size: 3rem
 .site-name__subtitle
   margin-top: 0
   text-transform: uppercase
   margin-bottom: $m
-.site-explanation__text-a,
-.site-explanation__text-b
-  font-size: 1.25em
-.site-explanation__text-b
+.site-explanation__text-a
+  font-weight: 300
+  font-size: 1.5em
+
+//.site-explanation__text-b
   font-weight: 400
   margin-top: $m
 

@@ -105,7 +105,6 @@
   a
     +link_white_brown
 
-
 =link_box_white
   border: 1px solid white
   +transition(background-color, .15s ease)
@@ -120,6 +119,21 @@
 =links_box_white
   a
     +link_box_white
+
+=link_box_magenta
+  border: 1px solid $palette_magenta
+  +transition(background-color, .15s ease)
+  &:link, &:visited
+    color: $palette_magenta
+  &:hover
+    background-color: $palette_magenta
+    color: white
+  &:active
+    color: $palette_magenta
+
+=links_box_magenta
+  a
+    +link_box_magenta
 
 =link_weight_dotted_white
   &

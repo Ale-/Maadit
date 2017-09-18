@@ -57,7 +57,7 @@
 
 =button_box_white
   +button_box
-  background-color: #DF0136
+  background-color: #C60021
   border-color: white
   color: white
   &:hover
@@ -88,9 +88,13 @@
   input[type=text],
   input[type=password],
   input[type=email],
+    +transition(background-color .1s ease)
     border: 1px dashed white
     border-width: 0 0 1px 0 
     background: none
+    &:focus
+      outline: 0
+      background-color: rgba(black, .1)
   #edit-submit
     +button_box_white
     position: absolute
@@ -101,8 +105,11 @@
   textarea
     border: 1px dashed white
     background: none
+    +transition(background-color .1s ease)
+    &:focus
+      outline: 0
+      background-color: rgba(black, .1)
   .description
-    text-indent: $m
     margin-top: $m/3
   label
     +h(5)
@@ -110,4 +117,40 @@
     text-transform: uppercase
     margin-bottom: $m/3
 
-
+=form_user_profile
+  .form-item
+    margin-bottom: $m
+  label
+    +h(5)
+    text-transform: uppercase
+    color: $palette_magenta
+  input[type=text],
+  input[type=email],
+  input[type=password]
+    +transition(background-color .25s ease)
+    border-width: 0 0 1px 0
+    border-color: rgba($palette_brown, .5)
+    margin: $m/2 0
+    &:focus
+      background-color: #eee
+      outline: 0
+  .description
+    opacity: .8
+  select
+    border-width: 0 0 1px 0
+    background: none
+    text-align: center
+    border-color: rgba($palette_brown, .5)
+  details
+    border: 0
+  summary
+    text-transform: uppercase
+    font-size: .9em
+    text-decoration: underline
+  #edit-language
+    margin-top: $m*2
+  input[type=submit]
+    +button_box_magenta
+  #edit-actions
+    margin-top: $m*3
+    text-align: center

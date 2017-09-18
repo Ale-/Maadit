@@ -1,0 +1,18 @@
+// Content region in user/client's dashboard
+
+.layout-content--user-dashboard
+  +breakpoint('sm')
+    padding: $m*4 calc(50vw - 600px)
+    +clearfix
+  .region-sidebar
+    display: inline-block
+    width: 25%
+    max-width: 100%
+    float: left
+  .region-content
+    display: inline-block
+    width: 75%
+    float: left
+    padding: 0 0 0 $m*2 !important
+    border-left: 2px solid $palette_brown
+    min-height: 480px

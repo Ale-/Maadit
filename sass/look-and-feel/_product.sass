@@ -1,0 +1,98 @@
+// Product view
+
+
+.product-wrapper
+
+  +clearfix
+  position: relative
+  min-height: $m*21
+
+  .field--name-title
+    +h(3)
+    color: #C90035
+    border-bottom: 2px solid  #C90035
+    margin: $m 0
+    text-transform: uppercase
+  .field--name-sku,
+  [data-drupal-selector="edit-purchased-entity-0-attributes-attribute-plan"]
+    display: none
+  .server-row
+    line-height: $m
+  .server-row__prefix
+    font-weight: 400
+    margin-right: $m/2
+    text-transform: uppercase
+    font-size: .9em
+    display: inline-block
+    width: $m*6
+  .field__label,
+  label,
+  [data-drupal-selector="edit-purchased-entity-0-attributes-attribute-period"] legend
+    +h(5)
+    color: #C90035
+    text-transform: uppercase
+  .js-form-item-purchased-entity-0-attributes-attribute-period
+    padding: $m/3
+    & label
+      padding: $m/2
+      text-transform: uppercase
+      font-size: .9em
+      color: #555
+  input[type=text]
+    background: none
+    border-width: 0 0 1px 0 
+    border-style: dashed
+    margin: $m/2
+    line-height: $m
+  .description
+    font-size: .8em
+    text-transform: uppercase
+    margin-left: $m/2
+  input[type=submit]
+    margin: $m*2 auto 
+    +button_box_magenta
+    display: block
+    width: 50%
+  .field--name-body
+    width: 40%
+    background: #f5f5f5
+    padding: $m
+  .field--type-commerce-price
+    width: 40%
+    margin-top: $m*2
+    text-align: center
+    font-size: 2em
+  .field--name-variations
+    position: absolute
+    right: 0
+    top: $m*2.5
+    width: 50%
+  #edit-purchased-entity-0-attributes legend,
+  .field--name-field-user-name-vm label,
+  .field--name-machine-name-vm label
+    &:before
+      color: $palette_brown
+      font-size: .8em
+      display: inline-block
+      width: $m/2
+      text-align: center
+      margin-right: $m/4
+  #edit-purchased-entity-0-attributes legend:before
+    content: "1"
+  .field--name-field-user-name-vm label:before
+    content: "2"
+  .field--name-machine-name-vm label:before
+    content: "3"
+  .month, .trim, .year
+    &:after
+      content: "*"
+      color: $palette_magenta
+      margin-left: $m/3
+
+.product__notes
+  margin-top: $m*2
+  font-size: .9em
+.product__notes-item:first-child:before
+  content: "*"
+  color: $palette_magenta
+  margin-right: $m/3

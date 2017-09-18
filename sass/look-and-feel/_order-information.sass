@@ -1,0 +1,50 @@
+// Order information forms
+
+// Payment information
+.layout-content--order-information
+  padding: $m
+  .region-content
+    +container-fixed
+  #payment-information-wrapper
+    margin-top: $m*2
+  #payment-information-wrapper > fieldset > legend
+    +h(2)
+    padding: 0 $m
+  form .form-item > label
+    display: inline-block
+    font-weight: 900
+    min-width: 140px
+  form .form-item > label.option
+    font-weight: inherit
+  #edit-payment-information
+    border-width: 2px
+    border-color: $palette_brown
+    padding: $m*2
+  .address-line2
+    margin-left: 144px
+  input[type=text]
+    border-width: 0 0 1px 0
+    border-style: dashed
+    width: 420px
+  select
+    +appearance(none)
+    border-width: 0 0 1px 0
+    border-style: dashed
+    border-color: $palette_brown
+    background: none
+    width: 420px
+  .js-form-item-payment-information-add-payment-method-billing-information-address-0-address-address-line1
+    margin-top: $m*1.5
+
+// Summary styles
+.layout-region-checkout-secondary
+  margin-top: $m*2
+  padding: 0 $m*2 $m*2
+
+.layout-region-checkout-footer
+  width: 100%
+  margin-top: $m*2
+  input[type=submit]
+    display: block
+    +button_box_magenta
+    margin: 0 auto

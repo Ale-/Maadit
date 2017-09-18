@@ -4,7 +4,7 @@
   &:before
     +icons
     content: $icon
-    color: $palette_brown
+    color: lighten($palette_brown, 20%)
     margin-right: $m/3
     display: inline-block
     text-align: center
@@ -52,7 +52,7 @@
         margin: 0
         padding: $m
         font-weight: 400
-        +links_box_white
+        +links_box_magenta
         +breakpoint('sm')
           text-align: center
           padding: 0
@@ -67,7 +67,7 @@
         text-transform: uppercase
         font-size: .9em
         letter-spacing: 2px
-        border-width: 2px
+        border-width: 2px !important
     .view-footer
       clear: both
       padding: 0 $m
@@ -81,7 +81,7 @@
       +breakpoint('sm')
         text-align: right
     .server-row
-      border-top: 2px solid white
+      border-top: 2px dotted lighten($palette_brown, 30%)
     .views-field-title
       +h(4)
 

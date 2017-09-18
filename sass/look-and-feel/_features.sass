@@ -3,35 +3,22 @@
 
 .software-features,
 .other-features
-  color: white
   position: relative
+  background-color: white
   text-align: center
-  +links_box_white
+  margin-bottom: $m
+  +links_box_magenta
   +breakpoint('sm')
     padding: $m*2 $m*4
-    border-top: 2px solid white
-
-.software-features,
-  margin: $m*2
-.other-features
-  margin: 0 $m*2
-
 
 .software-features__title,
 .other-features__title
-  border: 2px solid white
-  border-width: 0 2px
+  display: inline-block
   line-height: $m*2
-  padding: $m*2 $m
-  +breakpoint('sm')
-    position: absolute
-    top: -$m*2
-    padding: 0 $m*3
-
-.software-features__title,
-  background: #BD0035
-.other-features__title
-  background: #D80136
+  color: #DC0035
+  border-bottom: 6px solid #DC0035
+  margin: 0 0 $m*2
+  font-weight: 900
 
 .software-features__list,
 .other-features-list
@@ -42,7 +29,7 @@
   padding: $m/2
   margin-bottom: $m*2
   +breakpoint('sm')
-    display: inline- block
+    display: inline-block
     float: left
     width: 20%
     margin-bottom: 0
@@ -72,4 +59,4 @@
   line-height: 40px
   text-transform: uppercase
   padding: 0 $m/2
-  border-width: 2px
+  border-width: 2px !important

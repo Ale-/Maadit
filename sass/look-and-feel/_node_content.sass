@@ -1,8 +1,8 @@
 // Content of pages and other nodes
 
 .node__content
-  +links_weight_dotted_white
-  padding-top: $m*3
+  +links_magenta_brown
+  padding-top: $m*2
 
   h2
     font-size: 1.4rem
@@ -11,6 +11,16 @@
     text-transform: uppercase
     margin: $m*2 0 $m*1.5
     padding: $m/3 0
+    color: #C90035
+    &:before
+      content: "■"
+      font-size: 12px
+      color: lighten(#C90035, 10%)
+      vertical-align: top
+      margin-right: $m/2
+      padding-top: 4px
+      position: relative
+      top: 5px
   h4
     font-weight: 400
     font-size: 1.3rem
@@ -19,6 +29,18 @@
     padding: $m/3 0
 
   p, li
-    margin-bottom: $m/3
+    padding-bottom: $m/3
     text-align: justify
-    font-size: 1.1em
+    font-size: 1.2em
+
+  .remarked
+    font-size: 1.5em
+    text-align: justify
+    padding-bottom: $m
+    margin-left: $m*4
+    margin-bottom: $m*4
+    +links_brown_magenta
+    border-bottom: 8px solid #C90035
+
+  #create ul
+    padding: $m/2 $m*2
