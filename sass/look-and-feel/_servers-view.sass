@@ -10,6 +10,9 @@
     text-align: center
     width: $m
 
+.asterisk
+  color: $palette_magenta
+
 .path-servers
   .view-servers-view
     +clearfix
@@ -70,14 +73,13 @@
         border-width: 2px !important
     .view-footer
       clear: both
-      padding: 0 $m
+      padding: 0 0 0 50%
       line-height: 1.1
       padding-top: $m*2
       text-transform: uppercase
       font-size: .9em
       color: $palette_brown
-      font-weight: 400
-      text-align: center
+      +links_magenta_brown
       +breakpoint('sm')
         text-align: right
     .server-row

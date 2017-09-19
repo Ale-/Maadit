@@ -25,10 +25,17 @@
 ] %}
 
 <article{{ attributes.addclass(classes) }}>
-  {{ product|without('variation_attributes') }}
-  <div class="product__notes">
-      <p class="product__notes-item">
-          {{ 'Precios con IVA incluido' | trans }}
-      </p>
+  {{ product.variation_title }}
+  <div class="product__left">
+      {{ product.body }}
+      {{ product.variation_price }}
+      <div class="product__notes">
+          <p class="product__notes-item">
+              {{ 'Precios con IVA incluido' | trans }}
+          </p>
+      </div>
+  </div>
+  <div class="product__right">
+    {{ product|without('variation_title', 'variation_attributes', 'body', 'variation_price') }}
   </div>
 </article>

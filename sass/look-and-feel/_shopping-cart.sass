@@ -1,26 +1,27 @@
-// Shopping cart page
+// Shopping cart page   /cart
 
 .path-cart
-  #edit-actions
+  .cart-form
+    margin-top: $m*2
+    padding: $m
+    text-align: center
+    padding: 0 25%
+  .region-content .form-actions
     display: inline-block
     width: 50%
     float: left
-    margin-top: 0
     text-align: center
+    margin: 0 !important
     input
       +button_box_magenta
       letter-spacing: 2px
       text-transform: uppercase
       line-height: $m*2
+      margin: 0
+    [id^='edit-submit']
+      display: none
   .views-label-remove-button
     display: none
-  .region-content
-    padding: $m*3 0
-    width: 480px
-    max-width: 100%
-    margin: 0 auto
-    text-align: center
-    text-transform: uppercase
   .views-field
     border-bottom: 1px dashed $palette_magenta
     line-height: $m*2
@@ -60,6 +61,9 @@
     font-weight: 400
     &:hover
       cursor: pointer
+  .views-field-machine-name-vm
+    .field-content
+      display: inline-block
 
 // Empty view
 
