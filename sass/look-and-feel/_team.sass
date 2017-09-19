@@ -1,0 +1,43 @@
+// Team block in 'Quienes somos' page
+
+@import compass/css3/border-radius
+@import compass/css3/filter
+
+.maadix-team
+  +clearfix
+  img
+    max-width: 150px
+    height: auto
+    +filter( hue-rotate(15deg) )
+.maadix-team__item
+  padding: $m
+  display: inline-block
+  width: 33%
+  float: left
+  text-align: center
+  p
+    font-size: 1em
+  img
+    display: block
+    margin: 0 auto
+.maadix-team__name
+  text-transform: uppercase
+  text-align: center
+  padding: $m/3
+  margin: 0
+  color: $palette_magenta
+.maadix-team__role
+  font-weight: 400
+  text-transform: uppercase
+  font-size: .75em !important
+  text-align: center !important
+  color: $palette_magenta
+.maadix-team__text
+  text-align: left !important
+.maadix-team__link
+  clear: both
+  text-align: center !important
+  font-weight: 400
+  padding-top: $m/2
+  a
+    font-size: .9em
