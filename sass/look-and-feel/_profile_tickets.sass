@@ -1,3 +1,5 @@
+// Tickets view
+// /{es,en}/user/*/tickets
 
 .view-id-tickets
   +links_magenta_brown
@@ -22,52 +24,3 @@
   font-size: 1.25em
   padding: 0 $m*3
   +links_magenta_brown
-
-article.node--type-ticket
-  +links_magenta_brown
-  a
-    border-bottom: 0
-  .node__submitted,
-  .comment__submitted
-    font-weight: 400
-    text-transform: uppercase
-    font-size: .8em
-  .node__submitted,
-    margin-top: 0  
-  .comment__meta
-    float: right
-    display: inline
-  .node__links
-    position: absolute
-    top: 0
-    right: 0
-  .comment-add
-    display: none
-  .node__content
-    padding-top: 0
-  .field--name-body
-    border-top: 1px solid $palette_brown
-    border-bottom: 1px solid $palette_brown
-    padding: $m
-    font-size: 1.2em
-  .comment__meta a
-    display: none
-  .comment h3
-    display: none
-  .field--name-comment-body
-    border: 1px solid $palette_brown
-    padding: $m/2
-    clear: both
-  .comment-wrapper
-    padding-left: $m*2
-  .comment
-    margin-bottom: $m
-  .comment-form__title
-    +button_box_magenta
-    display: block
-    width: $m*12
-    margin: $m auto
-  .comment-form
-    display: none
-  .comment-reply
-    display: none
