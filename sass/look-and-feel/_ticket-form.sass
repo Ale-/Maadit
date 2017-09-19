@@ -1,7 +1,35 @@
-// Form to create a ticket
+// Form to submit tickets
+// {es,en}/node/add/ticket
 
 #node-ticket-form
   +form_user_profile
-
-  .field--name-field-issue-status
+  max-width: 480px
+  +breakpoint('sm')
+    margin-left: $m*4
+  .field--name-field-issue-status,
+  .filter-help
     display: none
+  .filter-wrapper
+    border: 0
+    padding: 0
+    li:before
+      content: "·"
+      margin-right: $m/4
+  .form-type-textfield
+    label
+      display: block
+    input
+      background-color: #f5f5f5
+      border: 0
+  .form-type-textarea
+    margin-bottom: 0
+    textarea
+      +transition(background-color .2s ease)
+      border: 0
+      margin-top: $m/2
+      background-color: #f5f5f5
+      &:focus
+        background-color: #eee
+  .form-actions
+    margin-top: $m*2
+    text-align: center
