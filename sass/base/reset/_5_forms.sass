@@ -118,6 +118,7 @@
     margin-bottom: $m/3
 
 =form_user_profile
+  +links_magenta_brown
   .form-item
     margin-bottom: $m
   label
@@ -128,8 +129,9 @@
   input[type=email],
   input[type=password]
     +transition(background-color .25s ease)
+    border: 1px dashed rgba($palette_brown, .5)
     border-width: 0 0 1px 0
-    border-color: rgba($palette_brown, .5)
+    background: none
     margin: $m/2 0
     &:focus
       background-color: #eee
@@ -137,10 +139,11 @@
   .description
     opacity: .8
   select
+    border: 1px dashed rgba($palette_brown, .5)
     border-width: 0 0 1px 0
     background: none
     text-align: center
-    border-color: rgba($palette_brown, .5)
+    +appearance(none)
   details
     border: 0
   summary

@@ -1,4 +1,22 @@
 // Form to edit user profile information
 
-#profile-customer-add-form
+#profile-customer-add-form,
+#profile-customer-edit-form
   +form_user_profile
+
+  label
+    width: $m*5
+    display: inline-block
+    border-bottom: 2px solid $palette_magenta
+  .address-line2
+    margin-left: $m*5 !important
+  .form-item-address-0-address-locality
+    margin-left: $m*2 !important
+  summary,
+  .js-form-item-field-vat-number-0-value label
+    font-weight: 900
+    color: $palette_brown
+    text-decoration: none
+    margin-top: $m
+    font-size: 1.1rem
+    border-bottom: 0
