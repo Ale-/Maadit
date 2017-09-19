@@ -1,6 +1,9 @@
 // Order information forms
+// /checkout/*/order_information
 
-// Payment information
+
+// Payment information fieldset // LEFT
+
 .layout-content--order-information
   padding: $m
   .region-content
@@ -20,6 +23,8 @@
     border-width: 2px
     border-color: $palette_brown
     padding: $m*2
+  #edit-payment-information-payment-method--wrapper
+    margin-top: 0
   .address-line2
     margin-left: 144px
   input[type=text]
@@ -36,10 +41,49 @@
   .js-form-item-payment-information-add-payment-method-billing-information-address-0-address-address-line1
     margin-top: $m*1.5
 
-// Summary styles
+
+// Order summary sidebar  // RIGHT
+
 .layout-region-checkout-secondary
   margin-top: $m*2
   padding: 0 $m*2 $m*2
+  position: relative
+
+  .views-field-expiry
+    display: none
+  .views-field-purchased-entity
+    font-weight: 400
+    text-transform: uppercase
+    font-size: .9em
+  .views-field-machine-name-vm .field-content
+    display: inline-block
+  .view-footer
+    margin-top: $m/2
+  .order-total-line__subtotal,
+  .order-total-line__adjustment,
+  .order-total-line__total
+    line-height: $m
+    padding: 0
+  .checkout-pane-coupon-redemption
+    margin-top: $m*1.5
+  [id^='edit-sidebar-coupon-redemption-form-code']
+    background: none
+    border-bottom: 1px dashed $color_text
+  [id^='edit-sidebar-coupon-redemption-form-apply']
+    background: none
+    border: 0
+    float: right
+    color: $palette_magenta
+    letter-spacing: 2px
+    text-transform: uppercase
+    font-weight: 400
+    font-size: .8em
+  #edit-sidebar-coupon-redemption .messages
+    top: inherit
+    bottom: -$m
+    right: $m*3
+
+// Checkout button // BELOW
 
 .layout-region-checkout-footer
   width: 100%
