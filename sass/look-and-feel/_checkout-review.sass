@@ -1,10 +1,14 @@
 // Checkout review form
+// /{es,en}/checkout/*/review
 
-// Payment information
+// Content region adjustments
+
 .layout-content--checkout-review
   padding: $m
   .region-content
     +container-fixed
+
+// Common fieldset styles
 
 #edit-review-payment-information,
 #edit-review-contact-information
@@ -13,12 +17,22 @@
   legend
     +h(3)
     padding: 0 $m
-    a
-      display: none
 
-#edit-review-payment-information
-  .address
+
+// Payment information
+
+#edit-review-payment-information,
+  a
+    display: none
+  .field--name-address,
+  .field--name-field-vat-number
     margin-top: $m
+    .field__label
+      margin-bottom: $m/3
+      text-transform: uppercase
+      font-weight: 400
+
+// Footer with buttons
 
 .layout-content--checkout-review
   .layout-region-checkout-footer
