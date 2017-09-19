@@ -1,5 +1,7 @@
 // Product view
+// /{en,es}/{mini,medium,maxi,grand}
 
+// General layout
 +breakpoint('sm')
   .product-wrapper
     +clearfix
@@ -13,14 +15,77 @@
     width: 50%
     float: right
     padding-left: $m/2
+    +breakpoint('xs')
+      margin-top: $m*2
 
+// Remove quotes below using sass, simpler
+.path-product .region-postface
+  display: none
+
+// Product information
 .product-wrapper
+  // Title
   .field--name-title
     +h(3)
     color: #C90035
     border-bottom: 2px solid  #C90035
     margin: $m 0
     text-transform: uppercase
+  // Left column
+  .field--name-body
+    background: #f5f5f5
+    padding: $m
+  .month, .trim, .year
+    &:after
+      content: "¹"
+      color: $palette_magenta
+      margin-left: $m/3
+  .product__notes
+    margin-top: $m/3
+    margin-left: $m
+    font-size: .9em
+  .product__notes-item:first-child:before
+    content: "¹"
+    color: $palette_magenta
+    margin-right: $m/3
+  .field--type-commerce-price
+    margin-top: $m*2
+    text-align: center
+    font-size: 2em
+  // Right column
+  .form-type-radio
+    margin-bottom: 0
+  .form-type-radio label
+    font-weight: 400
+    font-size: .9em
+  .form-radios .form-item
+    width: 32%
+  +breakpoint('sm')
+    .form-radios .form-item
+      width: 100%
+  +breakpoint('md')
+    .form-radios .form-item
+      width: 32.5%
+  #edit-purchased-entity-0-attributes legend,
+  .form-item
+    margin: 0 0 $m*1.5
+  input[type=text]
+    background: none
+    border-width: 0 0 1px 0 
+    border-style: dashed
+    margin: $m/2
+    line-height: $m
+  .description
+    font-size: .8em
+    text-transform: uppercase
+    margin-left: $m/2
+    margin-top: $m/2
+    +links_magenta_brown
+  input[type=submit]
+    margin: $m*2 auto 0
+    +button_box_magenta
+    display: block
+    width: 50%
   .field--name-sku,
   [data-drupal-selector="edit-purchased-entity-0-attributes-attribute-plan"]
     display: none
@@ -46,31 +111,8 @@
       text-transform: uppercase
       font-size: .9em
       color: #555
-  input[type=text]
-    background: none
-    border-width: 0 0 1px 0 
-    border-style: dashed
-    margin: $m/2
-    line-height: $m
-  .description
-    font-size: .8em
-    text-transform: uppercase
-    margin-left: $m/2
-    margin-top: $m/2
-    +links_magenta_brown
-  input[type=submit]
-    margin: $m*2 auto 0
-    +button_box_magenta
-    display: block
-    width: 50%
-  .field--name-body
-    background: #f5f5f5
-    padding: $m
-  .field--type-commerce-price
-    margin-top: $m*2
-    text-align: center
-    font-size: 2em
-  #edit-purchased-entity-0-attributes legend,
+      width: 100%
+      text-align: center
   .field--name-field-user-name-vm label,
   .field--name-machine-name-vm label
     &:before
@@ -86,16 +128,3 @@
     content: "2"
   .field--name-machine-name-vm label:before
     content: "3"
-  .month, .trim, .year
-    &:after
-      content: "*"
-      color: $palette_magenta
-      margin-left: $m/3
-
-.product__notes
-  margin-top: $m*2
-  font-size: .9em
-.product__notes-item:first-child:before
-  content: "*"
-  color: $palette_magenta
-  margin-right: $m/3
