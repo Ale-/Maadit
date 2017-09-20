@@ -42,29 +42,36 @@
 
 .cart-block--contents
   width: 360px
+  position: fixed
   +border-radius($m/4)
   padding: $m/2
-  text-align: center
   background: lighten($palette_brown, 10%)
-  line-height: 1.2
   overflow: inherit
   color: white
+  text-transform: uppercase
+  letter-spacing: 2px
+  font-size: .9em
   right: $m !important
   &:before
     content: "▲"
     color: lighten($palette_brown, 10%)
     font-size: 1.5em
     position: absolute
-    top: -20px
-    right: $m*6
+    top: -30px
+    right: 190px
     z-index: 900
   .views-field-quantity
     float: left
     margin-right: $m/3
   .views-field-title
     float: left
+    font-weight: 400
   .views-field-total-price__number
-    float: right
+    clear: both
+    font-weight: 300
+    &:before
+      content: "∟ "
+      color: rgba(white, .4)
   .views-field-quantity,
   .views-field-title
     font-weight: 400
@@ -73,9 +80,12 @@
     line-height: $m
   .cart-block--contents__links
     text-transform: uppercase
-    font-size: .9em
     font-weight: 900
     margin-top: $m/2
+    text-align: right
+    a
+      border: 1px solid white
+      padding: $m/2
 
 
 .cart-block--contents__items
