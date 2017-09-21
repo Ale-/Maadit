@@ -1,0 +1,48 @@
+// Applications page
+// /{es,en}/aplicaciones
+
+
+[class^='application-list__item--']
+  margin-bottom: $m/2
+  margin-left: $m*8
+  padding-left: $m
+  border-left: 4px solid $palette_magenta
+  position: relative
+  strong
+    font-weight: 900
+  em
+    font-weight: 400
+    font-size: .9em
+    font-style: normal
+  &:before
+    content: " "
+    display: inline-block
+    position: absolute
+    width: $m*2
+    height: $m*2
+    left: -$m*3
+    top: $m
+    background-size: contain
+    background-repeat: no-repeat
+    filter: (100%)
+
+.application-list__item--docs:before
+  background-image: url("/themes/custom/maadit/img/apps/docs.svg")
+.application-list__item--calendar:before
+  background-image: url("/themes/custom/maadit/img/apps/calendar.svg")
+.application-list__item--contacts:before
+  background-image: url("/themes/custom/maadit/img/apps/contacts.svg")
+.application-list__item--cpanel:before
+  background-image: url("/themes/custom/maadit/img/apps/cpanel.svg")
+.application-list__item--https:before
+  background-image: url("/themes/custom/maadit/img/apps/https.svg")
+.application-list__item--lists:before
+  background-image: url("/themes/custom/maadit/img/apps/lists.svg")
+.application-list__item--mail:before
+  background-image: url("/themes/custom/maadit/img/apps/mail.svg")
+.application-list__item--privacy:before
+  background-image: url("/themes/custom/maadit/img/apps/privacy.svg")
+.application-list__item--server:before
+  background-image: url("/themes/custom/maadit/img/apps/server.svg")
+.application-list__item--shared-docs:before
+  background-image: url("/themes/custom/maadit/img/apps/shared-docs.svg")

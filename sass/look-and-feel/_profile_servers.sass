@@ -1,30 +1,7 @@
 // View of purchased services in client's profile
+// /{es,en}/user/*/ordered-items
 
 @import compass/css3/border-radius
-
-.view-order-items
-  .list-group-item
-    border: 1px solid $palette_brown
-    padding: $m
-    display: inline-block
-    width: calc(50% - #{$m})
-    float: left
-    +links_magenta_brown
-    margin: $m/2
-    outline: $m*.75 solid white
-  .views-field .views-label
-    font-weight: 400
-    text-transform: uppercase
-    letter-spacing: 1px
-    font-size: .85em
-    display: block
-  .views-field
-    margin: $m/3 0
-  .views-field-title
-    +h(5)
-    text-transform: uppercase
-    color: $palette_magenta
-    margin: 0 0 $m
 
 .purchased-services-summary
   margin: $m*2 0
@@ -32,3 +9,40 @@
   padding: 0 $m*3
   +links_magenta_brown
 
+.view-order-items
+  .list-group-item
+    border-top: 1px solid $palette_brown
+    padding: $m
+    margin: 0 $m*3 $m
+    +links_magenta_brown
+  .service
+    +clearfix
+  .service h4
+    margin: 0 0 $m/3
+    font-weight: 400
+    text-transform: uppercase
+    color: $palette_brown
+    span
+      color: $palette_magenta
+      font-size: 1rem
+      margin-right: $m/2
+  .service p
+    margin-top: $m/4
+    text-transform: uppercase
+    font-size: .8em
+  .service__label
+    font-weight: 400
+    letter-spacing: 2px
+    display: block
+  +breakpoint('sm')
+    .service .container__left
+      width: 50%
+      float: left
+      display: inline-block
+    .service .container__right
+      width: 50%
+      display: inline-block
+      clear: both
+  .service__renew a
+    +button_box_magenta
+    margin-top: $m/2
