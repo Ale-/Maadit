@@ -35,3 +35,21 @@ function maadit_theme_suggestions_page_alter(array &$suggestions, array $variabl
       $suggestions[] = 'page__'.$content_type;
     }
 }
+
+/**
+ * Implementation of hook_form_alter().
+ * Modify the node title for Create Ticket form.
+ */
+function maadit_form_node_ticket_form_alter(&$form, &$form_state) {
+  $form['#title'] = t('Open ticket');
+
+}
+
+/**
+ * Implementation of hook_form_alter().
+ * Modify the node title for Customer page form.
+ */
+function maadit_form_profile_customer_add_form_alter(&$form, &$form_state) {
+  $form['#title'] = t('Add New Customer');
+
+}
