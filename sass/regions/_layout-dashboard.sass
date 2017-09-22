@@ -5,14 +5,19 @@
     padding: $m*4 calc(50vw - 600px)
     +clearfix
   .region-sidebar
-    display: inline-block
-    width: 25%
-    max-width: 100%
-    float: left
+    max-width: 90%
+    padding: $m 0 $m*2
+    +breakpoint('sm')
+      display: inline-block
+      width: 25%
+      float: left
+      padding: 0
   .region-content
-    display: inline-block
-    width: 75%
-    float: left
-    padding: 0 0 0 $m*2 !important
-    border-left: 2px solid $palette_brown
     min-height: 480px
+    padding: $m !important
+    +breakpoint('sm')
+      padding: 0 0 0 $m*2 !important
+      display: inline-block
+      width: 75%
+      float: left
+      border-left: 2px solid $palette_brown

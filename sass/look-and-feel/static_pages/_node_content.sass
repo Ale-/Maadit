@@ -2,7 +2,8 @@
 
 .node__content
   +links_magenta_brown
-  padding-top: $m*2
+  +breakpoint('sm')
+    padding-top: $m*2
 
   h2
     font-size: 1.4rem
@@ -36,11 +37,13 @@
   .remarked
     font-size: 1.5em
     text-align: justify
-    padding-bottom: $m
-    margin-left: $m*4
-    margin-bottom: $m*4
     +links_brown_magenta
     border-bottom: 8px solid #C90035
+    padding: $m
+    +breakpoint('sm')
+      padding-bottom: $m
+      margin-left: $m*4
+      margin-bottom: $m*4
 
   #create ul
     padding: $m/2 $m*2

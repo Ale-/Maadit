@@ -7,8 +7,10 @@
   background: white
   +box-shadow(0 0 10px rgba(black, .25))
   .region-content
-    padding: $m*2 0 $m*4
+    padding-bottom: $m*4
     color: $palette_brown
+    +breakpoint('sm')
+      padding-top: $m*2
 
 .layout-container--full
   margin: 0
@@ -50,7 +52,7 @@
     +container-fixed
     padding: $m*5 $m $m*4
     position: relative
-    width: 640px
+    width: 480px
     max-width: 100%
     background: none
     +sticky_footer--no-header--no-footer

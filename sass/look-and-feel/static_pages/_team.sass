@@ -11,10 +11,11 @@
     +filter( hue-rotate(15deg) )
 .maadix-team__item
   padding: $m
-  display: inline-block
-  width: 33%
-  float: left
   text-align: center
+  +breakpoint('sm')
+    display: inline-block
+    width: 33%
+    float: left
   p
     font-size: 1em
   img

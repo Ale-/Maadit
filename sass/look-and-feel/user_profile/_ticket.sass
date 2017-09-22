@@ -26,7 +26,7 @@
       display: inline-block
       text-transform: uppercase
       font-size: .8em
-  .field--name-body
+  .node .field--name-body
     border-top: 1px solid $palette_brown
     border-bottom: 1px solid $palette_brown
     padding: $m
@@ -38,6 +38,8 @@
     display: block
     width: $m*12
     margin: $m auto
+    +breakpoint('xs')
+      margin-bottom: $m*2
     &:after
       content: "⌄"
       font-family: sans-serif
@@ -46,7 +48,8 @@
       line-height: 1
   .comment-form
     display: none
-    padding: $m/2 $m*2
+    +breakpoint('sm')
+      padding: $m/2 $m*2
     .filter-help
       display: none
     .filter-wrapper
@@ -85,7 +88,9 @@
 
   // Comments
   .comment-wrapper
-    padding-left: $m*2
+    padding: $m*2 0
+    +breakpoint('sm')
+      padding-left: 0 $m*2
   .comment
     margin-bottom: $m
   .comment__meta

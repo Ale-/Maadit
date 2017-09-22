@@ -31,6 +31,7 @@
     border-width: 0 0 1px 0
     border-style: dashed
     width: 420px
+    background: none
   select
     +appearance(none)
     border-width: 0 0 1px 0
@@ -93,3 +94,19 @@
     display: block
     +button_box_magenta
     margin: 0 auto
+
+.checkout-pane-payment-information
+  border-width: 2px
+  border-color: $palette_brown
+  padding: $m*2
+  > legend
+    +h(2)
+    padding: 0 $m
+  .form-submit
+    float: right
+    background: none
+    letter-spacing: 2px
+    font-size: .9em
+    text-transform: uppercase
+    border: 0
+    font-weight: 400

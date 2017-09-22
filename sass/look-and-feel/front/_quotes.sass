@@ -8,9 +8,6 @@
   min-height: $m*10
   color: white
 
-.path-frontpage .quotes__item
-  border-bottom: 8px solid white
-
 +breakpoint('xs')
   .quotes
     margin-bottom: $m*3
@@ -19,8 +16,11 @@
   font-weight: 900
   font-size: 1.5em
 
-.quotes--no-slide .quotes__item-quote
-  font-weight: 300
+.quotes--no-slide 
+  .quotes__item-quote
+    font-weight: 300
+    max-width: 400px
+    margin: 0 auto
 
 .quotes__item-author
   font-weight: 400
@@ -54,10 +54,11 @@
 
 .quotes--no-slide
   margin: 0 auto
-  width: 480px
   padding: $m
   text-align: center
   font-weight: 400
+  +breakpoint('sm')
+    width: 480px
 
 .see-apps
   +links_white_magenta

@@ -4,10 +4,11 @@
 
 [class^='application-list__item--']
   margin-bottom: $m/2
-  margin-left: $m*8
-  padding-left: $m
-  border-left: 4px solid $palette_magenta
   position: relative
+  +breakpoint('sm')
+    margin-left: $m*8
+    padding-left: $m
+    border-left: 4px solid $palette_magenta
   strong
     font-weight: 900
   em

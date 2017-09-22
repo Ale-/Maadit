@@ -5,19 +5,24 @@
     margin-top: $m*2
     padding: $m
     text-align: center
-    padding: 0 25%
+    +breakpoint('sm')
+      padding: 0 25%
   .region-content .form-actions
-    display: inline-block
-    width: 50%
-    float: left
     text-align: center
-    margin: 0 !important
+    margin: $m/2 0 !important
+    +breakpoint('sm')
+      display: inline-block
+      width: 50%
+      float: left
+      margin: 0 !important
     input
       +button_box_magenta
       letter-spacing: 2px
       text-transform: uppercase
       line-height: $m*2
       margin: 0
+      +breakpoint('xs')
+        width: 100%
     [id^='edit-submit']
       display: none
   .views-label-remove-button
@@ -28,10 +33,15 @@
   .views-field-remove-button
     border-bottom: 0
     display: inline-block
-    width: 50%
-    text-align: center
-    float: right
+    width: 100%
+    +breakpoint('sm')
+      width: 50%
+      text-align: center
+      float: right
     input
+      +breakpoint('xs')
+        width: 100%
+        display: block
       +button_box_magenta
       letter-spacing: 2px
       text-transform: uppercase
@@ -80,3 +90,6 @@
     font-size: 4em
     color: rgba(black, .2)
     margin-bottom: $m
+
+.region-navigation--open .cart-form
+  display: none

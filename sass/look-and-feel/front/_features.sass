@@ -6,23 +6,43 @@
   position: relative
   background-color: white
   text-align: center
-  margin-bottom: $m
+  +clearfix
   +links_box_magenta
+  padding-top: $m*1.5
   +breakpoint('sm')
-    padding: $m*2 $m*4
+    padding: $m*2
+    min-height: 50vh
+
+.other-features
+  +breakpoint('xs')
+    padding-bottom: $m*2
+    
+
+.software-features__title,
+.other-features .container__left
+  display: inline-block
+  float: left
+  +breakpoint('sm')
+    width: 33.33%
+  +breakpoint('lg')
+    width: 16.66%
 
 .software-features__title,
 .other-features__title
-  display: inline-block
-  line-height: $m*2
   color: #DC0035
-  border-bottom: 6px solid #DC0035
-  margin: 0 0 $m*2
+  margin: 0 0 $m
+  padding: $m
   font-weight: 900
+  text-decoration: underline
+  +breakpoint('sm')
+    text-align: left
+    padding: 0
 
 .software-features__list,
-.other-features-list
+.other-features__list
   +clearfix
+  +breakpoint('sm')
+    margin-top: $m
 
 .software-features__list-item,
 .other-features__list-item
@@ -31,12 +51,24 @@
   +breakpoint('sm')
     display: inline-block
     float: left
-    width: 20%
+  +breakpoint('sm')
+    width: 33.33%
+  +breakpoint('lg')
+    width: 16.66%
+
     margin-bottom: 0
+
+.software-features__list-item-image
+  max-width: 75%
+
+.other-features__list-item-image
+  max-width: 33%
+.other-features__list-item:nth-child(3)
+  .other-features__list-item-image
+    max-width: 20%
 
 .software-features__list-item-image,
 .other-features__list-item-image
-  max-width: 75%
   +breakpoint('sm')
     max-height: 100%
     max-width: 50%
@@ -50,13 +82,9 @@
   padding-bottom: $m/2
   margin-bottom: $m/2
 
-.software-features__button,
-.other-features__button,
-  margin: $m $m
-  font-weight: 400
-  letter-spacing: 2px
+.other-features__button
+  margin-top: $m
   display: inline-block
-  line-height: 40px
-  text-transform: uppercase
-  padding: 0 $m/2
+  +button_box_magenta
   border-width: 2px !important
+

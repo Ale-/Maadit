@@ -5,7 +5,9 @@
 .view-commerce-user-orders .view-empty
   margin-bottom: $m*2
   font-size: 1.25em
-  padding: 0 $m*3
+  padding: 0 $m
+  +breakpoint('sm')
+    padding: 0 $m*3
 
 .view-display-id-order_page
   margin-top: $m*2

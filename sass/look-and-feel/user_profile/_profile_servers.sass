@@ -6,15 +6,18 @@
 .purchased-services-summary
   margin: $m*2 0
   font-size: 1.25em
-  padding: 0 $m*3
   +links_magenta_brown
+  +breakpoint('sm')
+    padding: 0 $m*3
 
 .view-order-items
   .list-group-item
     border-top: 1px solid $palette_brown
     padding: $m
-    margin: 0 $m*3 $m
+    margin-left: 0
     +links_magenta_brown
+    +breakpoint('sm')
+      margin: 0 $m*3 $m
   .service
     +clearfix
   .service h4

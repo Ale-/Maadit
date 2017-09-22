@@ -10,6 +10,10 @@ footer[role=contentinfo]
   margin-top: $m*2
   background-color: lighten($palette_brown, 2%)
 
+.path-frontpage footer[role=contentinfo]
+  +breakpoint('xs')
+    margin-top: $m*3
+
 .region-footer-left,
 .region-footer-right
   +column(6, 'sm', $m*2)

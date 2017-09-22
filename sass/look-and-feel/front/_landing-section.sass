@@ -4,36 +4,40 @@
 @import compass/css3/animation
 @import compass/css3/transition
 
-.region-landing
-  padding: $m*5 $m*2
+.landing-region-wrapper
+  padding: $m $m*2 $m/2
+  min-height: 100vh
   +breakpoint('sm')
     min-height: 50vh
-  //min-height: 100vh
-  //padding: 100px calc(50vw - 240px)
+    padding-top: $m*5
 
-//.toolbar-fixed .region-landing
-  padding-top: 140px
-
-#block-imagendenubes
+.cloud-image
   +animation(showup 2s)
-  object
+  svg
     max-width: 100%
+    path
+      +transition(fill-opacity .75s ease)
+    path:hover
+      fill-opacity: 0 !important
+    #path11786-6:hover
+      fill-opacity: 1 !important
+      
 
-#block-imagendenubes,
-#block-textoinicial
+.cloud-image,
+.region-landing
   display: inline-block
   width: 480px
   position: relative
+  vertical-align: middle
   +breakpoint('xs')
-    padding: $m
     max-width: 100%
 
 #block-textoinicial
   color: white
-  margin-left: $m*2 
   top: -$m*2
-  //text-align: center
-  //margin-top: $m
+  +breakpoint('sm')
+    top: -$m*3
+    margin-left: $m*2 
 
 .site-name__title
   text-transform: uppercase
@@ -46,10 +50,6 @@
 .site-explanation__text-a
   font-weight: 300
   font-size: 1.5em
-
-//.site-explanation__text-b
-  font-weight: 400
-  margin-top: $m
 
 .landing-actions
   margin-top: $m

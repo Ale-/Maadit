@@ -26,6 +26,7 @@
   [data-drupal-link-system-path='user/logout']
     +user_icons("\e902")
 
+
 #block-maadit-cart
   display: none
   float: right
@@ -34,16 +35,33 @@
     img
       display: none
     +user_icons("\e900")
-    
+
+.region-navigation--open #block-maadit-cart
+  display: none !important
+
 .cart-block--summary__count
   font-size: .9em
   vertical-align: top
 
 
 .cart-block--contents
-  width: 360px
   position: fixed
-  +border-radius($m/4)
+  +breakpoint('xs')
+    width: 100%
+    left: 0
+    top: $m*2
+  +breakpoint('sm')
+    width: 360px
+    right: $m !important
+    &:before
+      content: "▲"
+      color: lighten($palette_brown, 10%)
+      font-size: 1.5em
+      position: absolute
+      top: -30px
+      right: 190px
+      z-index: 900
+      +border-radius($m/4)
   padding: $m/2
   background: lighten($palette_brown, 10%)
   overflow: inherit
@@ -51,15 +69,6 @@
   text-transform: uppercase
   letter-spacing: 2px
   font-size: .9em
-  right: $m !important
-  &:before
-    content: "▲"
-    color: lighten($palette_brown, 10%)
-    font-size: 1.5em
-    position: absolute
-    top: -30px
-    right: 190px
-    z-index: 900
   .views-field-quantity
     float: left
     margin-right: $m/3

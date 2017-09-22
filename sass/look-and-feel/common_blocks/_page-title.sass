@@ -3,12 +3,14 @@
 #block-maadit-page-title h1
   color: white
   text-transform: uppercase
-  position: absolute
-  display: inline-block
   //border: 2px solid white
   padding: $m $m*3
   background-color: $palette_brown
   margin-top: $m/4
   +breakpoint('xs')
     left: $m
+    margin-bottom: 0
+  +breakpoint('sm')
+    position: absolute
+    display: inline-block
 
