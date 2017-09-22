@@ -19,23 +19,50 @@
  */
 #}
 
-<div{{ attributes }}>
-  <div>
-  {{ order.store_id }}
-  </div>
-  <div>
-  {{ order.field_invoice_number }}
-  </div>
-  <div>
-  {{ order.field_placed }}
-  </div>
-  <div>
-  {{ order.billing_profile }}
-  </div>
-  <div>
-  {{ order.order_items  }}
-  </div>
-  <div>
-  {{ order.total_price }}
+{% include '@maadit/blocks/pdf_style.html.twig' %}
+
+<div class="invoice">
+  <div{{ attributes }}>
+    <div class="invoice__emissor">
+        {% include '@maadit/blocks/logo-maadix-base64.html.twig' %}
+        <p class="invoice__emissor-name">
+            Maadix Corp.
+        </p>
+        <p class="invoice__emissor-address">
+            Islas Cayman, s/n
+        </p>
+        <p class="invoice__emissor-cif">
+            CIF 666
+        </p>
+    </div>
+    <div class="invoice__header">
+        <div class="invoice__header-left">
+            <div class="invoice-field invoice__profile">
+                {{ order.billing_profile }}
+            </div>
+        </div>
+        <div class="invoice__header-right">
+            <div class="invoice-field invoice__invoice_date">
+                <p class="field__label">
+                    {{ 'Emission date' | t }}
+                </p>
+                {{ 'now'|date('d/m/Y') }}
+            </div>
+            <div class="invoice-field invoice__invoice_number">
+                {{ order.field_invoice_number }}
+            </div>
+        </div>
+    </div>
+    <div class="invoice__content">
+        <div class="invoice-field invoice__items">
+            {{ order.order_items  }}
+        </div>
+        <div class="invoice-field invoice__price">
+            {{ order.total_price }}
+        </div>
+    </div>
+    <div class="invoice__colophon">
+        {{ 'Ante cualquier duda recuerde que nadie le obligó a contratar nuestros servicios, gonorrea!.' | t }}
+    </div>
   </div>
 </div>

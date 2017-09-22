@@ -52,7 +52,12 @@
   <main role="main">
       <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
       <div class="layout-content">
-          {{ page.landing }}
+          <div class="landing-region-wrapper">
+              <div class="cloud-image">
+                  {% include '@maadit/svg/maadix-clouds-image.html' %}
+              </div>
+              {{ page.landing }}
+          </div>
           {{ page.features_head }}
           {{ page.statements_head }}
           {{ page.features_tail }}
