@@ -26,30 +26,44 @@
     <div class="invoice__emissor">
         {% include '@maadit/blocks/logo-maadix-base64.html.twig' %}
         <p class="invoice__emissor-name">
-            Maadix Corp.
+            MaadixZone S.L.
         </p>
         <p class="invoice__emissor-address">
-            Islas Cayman, s/n
+            Calle Roser 13, 2º 1º<br />
+            08004 Barcelona
         </p>
         <p class="invoice__emissor-cif">
-            CIF 666
+            NIF: B66869249 
         </p>
     </div>
     <div class="invoice__header">
         <div class="invoice__header-left">
             <div class="invoice-field invoice__profile">
-                {{ order.billing_profile }}
+                <p class="field__label">
+                    {{ 'Factura a:' | t }}
+                </p>
+
+                {{ order.billing_information }}
+                {% if order.billing_information['#profile'].tmp_tax_number.value %}
+                  {{ order.billing_information['#profile'].tmp_tax_number.value }}
+                {% else %}
+                  {{ order.billing_information['#profile'].field_vat_number.value }}
+                {% endif %}
             </div>
         </div>
         <div class="invoice__header-right">
             <div class="invoice-field invoice__invoice_date">
                 <p class="field__label">
-                    {{ 'Emission date' | t }}
+                    {{ 'Fecha factura' | t }}
                 </p>
                 {{ 'now'|date('d/m/Y') }}
             </div>
             <div class="invoice-field invoice__invoice_number">
-                {{ order.field_invoice_number }}
+                <p class="field__label">
+                    {{ 'Número factura' | t }}
+                </p>
+
+                {{ order.field_invoice_number.0 }}
             </div>
         </div>
     </div>
@@ -61,8 +75,8 @@
             {{ order.total_price }}
         </div>
     </div>
-    <div class="invoice__colophon">
-        {{ 'Ante cualquier duda recuerde que nadie le obligó a contratar nuestros servicios, gonorrea!.' | t }}
+    <div class="invoice__colophon" style="border-top: 1px solid #ccc;text-align:center;">
+        {{ 'MaadixZone S.L,  Calle Roser 13, 2º 1º 08004 Barcelona, España. Registro Mercantil de Barcelona, Tomo 45650, Folio 207, Hoja 494628, Inscripción 1º' | t }}
     </div>
   </div>
 </div>

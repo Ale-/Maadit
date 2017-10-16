@@ -30,12 +30,13 @@
       {{ product.body }}
       <div class="product__notes">
           <p class="product__notes-item">
-              {{ 'Precios con IVA incluido' | trans }}
+              {{ 'Prices without taxes. Local rate will be applied' | trans }}
           </p>
-      </div>
       {{ product.variation_price }}
+      </div>
+      {{ product.field_description }}
   </div>
   <div class="product__right">
-    {{ product|without('variation_title', 'variation_attributes', 'body', 'variation_price') }}
+    {{ product|without('field_description','variation_title', 'variation_attributes', 'body', 'variation_price') }}
   </div>
 </article>

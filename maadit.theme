@@ -53,3 +53,74 @@ function maadit_form_profile_customer_add_form_alter(&$form, &$form_state) {
   $form['#title'] = t('Add New Customer');
 
 }
+
+/**
+ * Implementation of hook_form_alter().
+  * Modify the node title for Customer page form.
+   */
+   function maadit_views_form_commerce_cart_form_default_302_form_alter(&$form, &$form_state) {
+       $form['#title'] = t('Detalles del pedido');
+
+   }
+
+
+/**
+ * Implementation of hook_form_alter().
+ * Modify the node title for rnew order item form
+ */
+function maadit_form_recurring_payments_renew_form_alter(&$form, &$form_state) {
+  $form['#title'] = t('Renew service');
+//  $form['help']['#attributes']['#markup'] = t('Press the renew button below to add the order to your cart');
+
+}
+
+/**
+ * Implementation of hook_form_alter().
+ * Modify the node title for rnew order item form
+ */
+/*
+function maadit_form_profile_customer_edit_form_alter(&$form, &$form_state) {
+  $form['field_vat_number']['widget'][0]['value']['#states']['visible'][] = ['input[name="tmp_tax_number[0][value]"]' => ['visible' => FALSE] ];
+}
+*/
+
+function maadit_form_profile_customer_edit_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+    $form['tmp_tax_number']['widget'][0]['value']['#title']= t('VAT');
+    foreach (array_keys($form['actions']) as $action) {
+      if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
+        $form['actions'][$action]['#submit'][] = 'maadit_form_profile_customer_edit_form_submit';
+      }
+    }
+}
+ 
+function maadit_form_profile_customer_edit_form_submit($form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  // Get the submitted entity.
+  if ($entity = $form_state->getFormObject()->getEntity()) {
+    if($entity->hasField('tmp_tax_number')){
+      $tax_num = $entity->get('tmp_tax_number')->getValue();
+      if(!empty($tax_num)) {
+        $entity->set('field_vat_number', $tax_num );
+        $entity->save();
+      }
+    } 
+  }
+  
+}
+function maadit_form_commerce_checkout_flow_multistep_default_alter(&$form, &$form_state) {
+    $form['input[name="payment_information_billing_information_edit"]']['#access'] = FALSE;
+    foreach (array_keys($form['actions']) as $action) {
+      if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
+        $form['actions'][$action]['#submit'][] = 'maadit_commerce_checkout_flow_multistep_default_submit';
+      }
+    }
+
+}
+
+function maadit_commerce_checkout_flow_multistep_default_submit($form, \Drupal\Core\Form\FormStateInterface $form_state) {
+      $tax_num = $form['billing_profile']['#profile']['tmp_tax_number'];
+      if(!empty($tax_num)) {
+        $form['billing_profile']['#profile']-> set('field_vat_number', $tax_num );
+        $form['billing_profile']['#profile']->save();
+      }
+
+}

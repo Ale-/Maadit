@@ -46,16 +46,27 @@
 <div class="layout-container">
   
   {{ page.navigation }}
-  
+
+  <header role="banner">
+    {{ page.header }}
+  </header>
 
   {{ page.messages }}
 
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-    <div class="layout-content">
+    <div class="layout-content layout-content--displaced">
       {{ page.content }}
+
     </div>{# /.layout-content #}
   </main>
+
   {{ page.postface }}
+
+  <footer role="contentinfo">
+    {{ page.footer_left }}
+    {{ page.footer_right }}
+  </footer>
+
   {{ page.colophon }}
 </div>

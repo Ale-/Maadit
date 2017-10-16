@@ -11,13 +11,21 @@
  */
 #}
 <div class="checkout-complete">
-  {{ 'Your payment has been succesfully completed.'|t }} <br>
-  <br>
-  {{ 'You can view your services details <a href="/user/@customerid/ordered-items">here</a>.'|t({'@customerid': order_entity.getCustomerId()}) }} <br>
   {% if payment_instructions %}
     <div class="checkout-complete__payment-instructions">
       <h2>{{ 'Payment instructions'|t }}</h2>
       {{ payment_instructions }}
+      <span class="bank-transfer-amount"><strong>{{ 'AMOUNT: '|t }}</strong> {{ '@amount'|t({'@amount': order_entity.getTotalPrice()}) }}
+      </span><br />
+      <span class="bank-transfer-orderid"><strong>{{ 'BANK TRANSFER CONCEPT: '|t }}</strong> {{ 'order number @ordernumber '|t({'@ordernumber': order_entity.getOrderNumber()}) }}
+      </span><br /><br />
+      <div class="remember">
+        <p>{{ 'Please, don\'t forget to include the order number in the concept of your transfer'|t }}</p><br />
+      </div>
     </div>
+  {% else %}
+  {{ 'Your payment has been succesfully completed.'|t }} <br>
+  <br>
   {% endif %}
+  {{ 'You can view your services details <a href="/user/@customerid/ordered-items">here</a>.'|t({'@customerid': order_entity.getCustomerId()}) }} <br> 
 </div>
